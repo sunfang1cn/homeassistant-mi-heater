@@ -4,7 +4,7 @@ xiaomi zhimi heater（小米 智米电暖器智能版） component for home-assi
 ### Install
 place miheater.py to your ````<home-assistant-config-path>/custom_components/climate/````  path
   
-### configuration.yaml
+### Configuration.yaml
 
 ````
 climate:
@@ -15,8 +15,11 @@ climate:
 ````
 
 
-### features
+### Features
 
 * supporting power on/off
 * supporting setting temperature
 * supporting read temperature/humidity from device
+
+### Notice
+token must got from APP miio2.db, not from "miio discover" on PC
