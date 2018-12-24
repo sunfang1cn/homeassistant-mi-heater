@@ -7,7 +7,7 @@ import logging
 import voluptuous as vol
 
 from homeassistant.components.climate import (
-    ClimateDevice, DOMAIN, PLATFORM_SCHEMA, STATE_HEAT,
+    ClimateDevice, DOMAIN, PLATFORM_SCHEMA, STATE_HEAT,STATE_COOL,
     SUPPORT_TARGET_TEMPERATURE,
     SUPPORT_ON_OFF, SUPPORT_OPERATION_MODE)
 from homeassistant.const import (
@@ -182,7 +182,7 @@ class MiHeater(ClimateDevice):
 
     async def async_set_operation_mode(self, operation_mode):
         """Set operation mode."""
-        if operation_mode == STATE_HEAT:
+        if operation_mode == STATE_HEAT or operation_mode == STATE_COOL:
             await self.async_turn_on()
         elif operation_mode == STATE_OFF:
             await self.async_turn_off()
