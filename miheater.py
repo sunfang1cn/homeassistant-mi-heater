@@ -7,11 +7,7 @@ import logging
 import voluptuous as vol
 
 
-try:
-    from homeassistant.components.climate import (ClimateDevice, DOMAIN, PLATFORM_SCHEMA, STATE_HEAT,STATE_COOL,SUPPORT_TARGET_TEMPERATURE,SUPPORT_ON_OFF, SUPPORT_OPERATION_MODE)
-finally:
-    from homeassistant.components.climate import (ClimateDevice, PLATFORM_SCHEMA)
-    from homeassistant.components.climate.const import (DOMAIN, STATE_HEAT,STATE_COOL,SUPPORT_TARGET_TEMPERATURE,SUPPORT_ON_OFF, SUPPORT_OPERATION_MODE)
+from homeassistant.components.climate import (ClimateDevice, DOMAIN, PLATFORM_SCHEMA,STATE_HEAT,STATE_COOL,SUPPORT_TARGET_TEMPERATURE,SUPPORT_ON_OFF, SUPPORT_OPERATION_MODE)
 
     
 from homeassistant.const import (
